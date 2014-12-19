@@ -1,8 +1,0 @@
-d:\documents\visual studio 2010\Projects\PickAProject\PickAProject\bin\Debug\PickAProject.exe
-d:\documents\visual studio 2010\Projects\PickAProject\PickAProject\bin\Debug\PickAProject.pdb
-d:\documents\visual studio 2010\Projects\PickAProject\PickAProject\obj\x86\Debug\PickAProject.mainForm.resources
-d:\documents\visual studio 2010\Projects\PickAProject\PickAProject\obj\x86\Debug\PickAProject.Properties.Resources.resources
-d:\documents\visual studio 2010\Projects\PickAProject\PickAProject\obj\x86\Debug\PickAProject.csproj.GenerateResource.Cache
-d:\documents\visual studio 2010\Projects\PickAProject\PickAProject\obj\x86\Debug\PickAProject.exe
-d:\documents\visual studio 2010\Projects\PickAProject\PickAProject\obj\x86\Debug\PickAProject.pdb
-d:\documents\visual studio 2010\Projects\PickAProject\PickAProject\bin\Debug\Attributes.xml
