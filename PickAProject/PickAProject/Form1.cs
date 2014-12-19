@@ -24,7 +24,7 @@ namespace PickAProject
         {
             /// <summary>
             /// Creates a sentence with the following format and a URL to the engine's source:
-            ///  Create a(n) {Genre} {Genre} in {Game Engine} that utilizes {Design Perk}, {Design Perk}, and {Design Perk} that takes place {Theme}.
+            ///  Create a(n) {Genre} {Genre} game in {Game Engine} that utilizes {Design Perk}, {Design Perk}, and {Design Perk} that takes place {Theme}.
             ///  {Game Engine} uses {language} and can be found at {url}.
             ///
             /// Example: 
@@ -42,7 +42,8 @@ namespace PickAProject
                 List<XElement> engineList = QueryXML("engines", xmlDoc);
                 List<XElement> perkList = QueryXML("perks", xmlDoc);
                 List<XElement> themeList = QueryXML("themes", xmlDoc);
-                string genres = "", engineName = "", perks = "", theme = "";
+                List<XElement> styleList = QueryXML("styles", xmlDoc);
+                string genres = "", engineName = "", perks = "", theme = "", style = "";
 
                 Random rand = new Random();
                 List<int> randResults;
@@ -53,7 +54,7 @@ namespace PickAProject
                 {
                     // The "an" attribute tells the code whether or not to write "a" or "an" for proper grammer.
                     randResults = Enumerable.Range(0, genreList.Count).OrderBy(x => rand.Next()).Take(randRequests).ToList<int>();
-                    genres = string.Format("Create {0} {1} {2}", 
+                    genres = string.Format("Create {0} {1} {2} game", 
                         genreList[randResults[0]].Attribute("an").Value == "true" ? "an" : "a",
                         genreList[randResults[0]].Value, 
                         genreList[randResults[1]].Value);
@@ -91,7 +92,10 @@ namespace PickAProject
                         themeList[rand.Next(0, themeList.Count)].Value);
                 }
 
-                output = genres + engineName + perks + theme;
+                // Write style
+                // TODO: write style.
+
+                output = genres + engineName + perks + theme + style;
 
                 websiteButton.Enabled = true;
             }

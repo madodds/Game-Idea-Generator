@@ -2,10 +2,11 @@
 <!-- 
 -README-
 The sentence structure is:
-Create a(n) {genre} {genre} in {engine} that utilizes {perk}, {perk}, and {perk} that takes place {theme}.
-{engine} uses {language} and can be found at {url}.
+  Create a(n) {genre} {genre} game that utilizes {perk}, {perk}, and {perk}. 
+  This game has a(n) {theme} theme with a {style} art style.
+  Try using {engine.language} to build this game in {engine}, which can be found at {engine.url}.
 
-genre attribute(an) 
+attribute(an) 
   determines if the result of the "a(n)" shown above.
   equals "true" or "false" and nothing else.
   
@@ -20,26 +21,69 @@ engine attribute(language)
 -->
 <attributes>
   <genres>
-    <genre an="false">top-down shooter</genre>
-    <genre an="false">roguelike</genre>
+    <genre an="true">action</genre>
+    <genre an="true">adventure</genre>
+    <genre an="false">rogue-like</genre>
     <genre an="false">tower defence</genre>
-    <genre an="true">RPG</genre>
+    <genre an="false">horror</genre>
+    <genre an="false">survival</genre>
+    <genre an="false">racing</genre>
+    <genre an="false">stealth</genre>
+    <genre an="false">strategy</genre>
+    <genre an="false">role playing</genre>
+    <genre an="false">platformer</genre>
+    <genre an="false">sports</genre>
+    <genre an="false">simulation</genre>
+    <genre an="false">casual</genre>
+    <genre an="false">shooter</genre>
+    <genre an="false">puzzle</genre>
+    <genre an="false">fighting</genre>
+    <genre an="false">flight</genre>
+    
   </genres>
   <engines>
     <engine url="http://unity3d.com" language="C# / JavaScript">Unity</engine>
     <engine url="https://love2d.org/" language="Lua">LÖVE</engine>
   </engines>
   <perks>
-    <perk>Skill Trees</perk>
-    <perk>Pathfinding</perk>
-    <perk>Synchronized Music</perk>
-    <perk>Procedurally Generated Environments</perk>
-    <perk>Story Branching</perk>
+    <perk>skill trees</perk>
+    <perk>pathfinding</perk>
+    <perk>synchronized music</perk>
+    <perk>procedurally generated environments</perk>
+    <perk>story branching</perk>
+    <perk>multiplayer</perk>
+    <perk>an open world</perk>
+    <perk>sandbox capabilities</perk>
+    <perk>turn-based gameplay</perk>
+    <perk>an isometric camera</perk>
+    <perk>"advanced" physics</perk>
+    <perk>character customization</perk>
+    <perk>Metroidvania dynamics</perk>
+    <perk>destructable environments</perk>
+    <perk>cutscenes / self playing demo</perk>
   </perks>
   <themes>
-    <theme>underwater</theme>
-    <theme>in space</theme>
-    <theme>in the past</theme>
-    <theme>in the future</theme>
+    <theme an="true">apocolyptic</theme>
+    <theme an="true">underwater</theme>
+    <theme an="true">eastern</theme>
+    <theme an="false">dystopian</theme>
+    <theme an="false">sci-fi</theme>
+    <theme an="false">space</theme>
+    <theme an="false">historical Earth</theme>
+    <theme an="false">fantasy</theme>
+    <theme an="false">medieval</theme>
+    <theme an="false">western</theme>
   </themes>
+  <styles>
+    <style an="true">abstract</style>
+    <style an="false">cute</style>
+    <style an="false">retro</style>
+    <style an="false">colorful and vibrant</style>
+    <style an="false">dark and disturbing</style>
+    <style an="false">steampunk</style>
+    <style an="false">cyberpunk</style>
+    <style an="false">realistic</style>
+    <style an="false">gothic</style>
+    <style an="false">psychedelic</style>
+  </styles>
 </attributes>
