@@ -1,4 +1,4 @@
-Game-Idea-Generator
+Game Idea Generator
 ===================
 
 Randomly generates an idea for a video game project. The results are generated using the contents of the Attributes.xml. Nodes can be added to the xml to increase the diversity of amount. However, new node "types" being declared won't do anything without a code change.
