@@ -1,4 +1,23 @@
 <?xml version="1.0"?>
+<!-- 
+-README-
+The sentence structure is:
+Create a(n) {genre} {genre} in {engine} that utilizes {perk}, {perk}, and {perk} that takes place {theme}.
+{engine} uses {language} and can be found at {url}.
+
+genre attribute(an) 
+  determines if the result of the "a(n)" shown above.
+  equals "true" or "false" and nothing else.
+  
+engine attribute(url)
+  provides the url to the engine's main web site.
+  exists as a url that will work when pasted into your browser.
+  
+engine attribute(language)
+  states the engine's language(s) it uses.
+  is a generic string.
+  
+-->
 <attributes>
   <genres>
     <genre an="false">top-down shooter</genre>
