@@ -36,9 +36,9 @@
             // generationButton
             // 
             this.generationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.generationButton.Location = new System.Drawing.Point(13, 234);
+            this.generationButton.Location = new System.Drawing.Point(13, 279);
             this.generationButton.Name = "generationButton";
-            this.generationButton.Size = new System.Drawing.Size(183, 26);
+            this.generationButton.Size = new System.Drawing.Size(204, 26);
             this.generationButton.TabIndex = 0;
             this.generationButton.Text = "Generate Project";
             this.generationButton.UseVisualStyleBackColor = true;
@@ -52,16 +52,16 @@
             this.textOutput.Multiline = true;
             this.textOutput.Name = "textOutput";
             this.textOutput.ReadOnly = true;
-            this.textOutput.Size = new System.Drawing.Size(369, 215);
+            this.textOutput.Size = new System.Drawing.Size(412, 260);
             this.textOutput.TabIndex = 1;
             // 
             // websiteButton
             // 
             this.websiteButton.Enabled = false;
             this.websiteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.websiteButton.Location = new System.Drawing.Point(199, 234);
+            this.websiteButton.Location = new System.Drawing.Point(221, 279);
             this.websiteButton.Name = "websiteButton";
-            this.websiteButton.Size = new System.Drawing.Size(183, 26);
+            this.websiteButton.Size = new System.Drawing.Size(204, 26);
             this.websiteButton.TabIndex = 2;
             this.websiteButton.Text = "Open the URL";
             this.websiteButton.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             this.AcceptButton = this.generationButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 272);
+            this.ClientSize = new System.Drawing.Size(437, 317);
             this.Controls.Add(this.websiteButton);
             this.Controls.Add(this.textOutput);
             this.Controls.Add(this.generationButton);
