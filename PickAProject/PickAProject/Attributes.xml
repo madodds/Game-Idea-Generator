@@ -3,8 +3,8 @@
 -README-
 The sentence structure is:
   Create a(n) {genre} {genre} game that utilizes {perk}, {perk}, and {perk}. 
-  This game has a(n) {theme} theme with a {style} art style.
-  Try using {engine.language} to build this game in {engine}, which can be found at {engine.url}.
+  This game has a(n) {setting} setting with a {style} art style.
+  Try using {engine} to build this game, which can be found at {engine.url}. {engine} uses {engine.language} as its language.
 
 attribute(an) 
   determines if the result of the "a(n)" shown above.
@@ -39,11 +39,22 @@ engine attribute(language)
     <genre an="false">puzzle</genre>
     <genre an="false">fighting</genre>
     <genre an="false">flight</genre>
-    
+
   </genres>
   <engines>
-    <engine url="http://unity3d.com" language="C# / JavaScript">Unity</engine>
     <engine url="https://love2d.org/" language="Lua">LÖVE</engine>
+    <engine url="http://luxeengine.com/" language="Haxe">Luxe</engine>
+    <engine url="http://snowkit.org/" language="Haxe">Snowkit</engine>
+    <engine url="http://www.pixijs.com/" language="HTML5">pixi.js</engine>
+    <engine url="http://www.blender.org/" language="Python">Blender</engine>
+    <engine url="http://haxeflixel.com/" language="Haxe">HaxeFlixel</engine>
+    <engine url="http://jmonkeyengine.org/" language="Java">JMonkey3</engine>
+    <engine url="http://phaser.io/" language="HTML5, JavaScript">Phaser</engine>
+    <engine url="http://libgdx.badlogicgames.com/" language="Java">libgdx</engine>
+    <engine url="http://www.stencyl.com/" language="non existant">stencyl</engine>
+    <engine url="http://unity3d.com" language="C#, Boo, UnityScript">Unity</engine>
+    <engine url="https://www.yoyogames.com/studio" language="GML">Game Maker</engine>
+    <engine url="https://www.unrealengine.com/products/udk" language="Unrealscript">UDK</engine>
   </engines>
   <perks>
     <perk>skill trees</perk>
@@ -59,21 +70,21 @@ engine attribute(language)
     <perk>"advanced" physics</perk>
     <perk>character customization</perk>
     <perk>Metroidvania dynamics</perk>
-    <perk>destructable environments</perk>
+    <perk>destructible environments</perk>
     <perk>cutscenes / self playing demo</perk>
   </perks>
-  <themes>
-    <theme an="true">apocolyptic</theme>
-    <theme an="true">underwater</theme>
-    <theme an="true">eastern</theme>
-    <theme an="false">dystopian</theme>
-    <theme an="false">sci-fi</theme>
-    <theme an="false">space</theme>
-    <theme an="false">historical Earth</theme>
-    <theme an="false">fantasy</theme>
-    <theme an="false">medieval</theme>
-    <theme an="false">western</theme>
-  </themes>
+  <settings>
+    <setting an="true">apocalyptic</setting>
+    <setting an="true">underwater</setting>
+    <setting an="true">eastern</setting>
+    <setting an="false">dystopian</setting>
+    <setting an="false">sci-fi</setting>
+    <setting an="false">space</setting>
+    <setting an="false">historical Earth</setting>
+    <setting an="false">fantasy</setting>
+    <setting an="false">medieval</setting>
+    <setting an="false">western</setting>
+  </settings>
   <styles>
     <style an="true">abstract</style>
     <style an="false">cute</style>
@@ -83,7 +94,7 @@ engine attribute(language)
     <style an="false">steampunk</style>
     <style an="false">cyberpunk</style>
     <style an="false">realistic</style>
-    <style an="false">gothic</style>
+    <style an="false">Gothic</style>
     <style an="false">psychedelic</style>
   </styles>
 </attributes>

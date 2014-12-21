@@ -23,17 +23,20 @@ namespace PickAProject
         private void generationButton_Click(object sender, EventArgs e)
         {
             /// <summary>
-            /// Creates a sentence with the following format and a URL to the engine's source:
-            ///  Create a(n) {Genre} {Genre} game in {Game Engine} that utilizes {Design Perk}, {Design Perk}, and {Design Perk} that takes place {Theme}.
-            ///  {Game Engine} uses {language} and can be found at {url}.
+            /// Creates a couple sentences of randomly selected game design attributes.
+            /// 
+            /// Format:
+            ///  Create a(n) {genre} {genre} game that utilizes {perk}, {perk}, and {perk}. 
+            ///  This game has a(n) {setting} setting with a {style} art style.
+            ///  Try using {engine} to build this game, which can be found at {engine.url}. {engine} uses {engine.language} as its language.
             ///
             /// Example: 
-            ///  Create a roguelike top-down shooter in Unity that utilizes Skill Trees, Pathfinding, and Synchronized Music that takes place underwater.
-            ///  Unity uses C# / JavaScript and can be found at: http://unity3d.com
+            ///  Create a role playing horror game that utilizes character customization, destructible environments, and turn-based gameplay.
+            ///  This game has an underwater setting with a gothic art style.
+            ///  Need an engine? Try using Unity to build this game, which can be found at http://unity3d.com. Unity uses C# / JavaScript as its language.
             /// </summary>
 
-            string output = "Unthrown Error";
-            string engineDetails = "Could not generate project.";
+            List<string> output = new List<string>();
             try
             {
                 // Load the xml and put its nodes into lists.
@@ -41,9 +44,9 @@ namespace PickAProject
                 List<XElement> genreList = QueryXML("genres", xmlDoc);
                 List<XElement> engineList = QueryXML("engines", xmlDoc);
                 List<XElement> perkList = QueryXML("perks", xmlDoc);
-                List<XElement> themeList = QueryXML("themes", xmlDoc);
+                List<XElement> settingList = QueryXML("settings", xmlDoc);
                 List<XElement> styleList = QueryXML("styles", xmlDoc);
-                string genres = "", engineName = "", perks = "", theme = "", style = "";
+                string genres = "", engine = "", perks = "", setting = "", style = "";
 
                 Random rand = new Random();
                 List<int> randResults;
@@ -52,7 +55,7 @@ namespace PickAProject
                 int randRequests = 2;
                 if (genreList.Count >= randRequests)
                 {
-                    // The "an" attribute tells the code whether or not to write "a" or "an" for proper grammer.
+                    // The "an" attribute tells the code whether or not to write "a" or "an" for proper grammar.
                     randResults = Enumerable.Range(0, genreList.Count).OrderBy(x => rand.Next()).Take(randRequests).ToList<int>();
                     genres = string.Format("Create {0} {1} {2} game", 
                         genreList[randResults[0]].Attribute("an").Value == "true" ? "an" : "a",
@@ -60,55 +63,73 @@ namespace PickAProject
                         genreList[randResults[1]].Value);
                 }
 
-                // Write engine, its details, and its URL
-                randRequests = 1;
-                if (engineList.Count >= randRequests)
-                {
-                    randResults = Enumerable.Range(0, engineList.Count).OrderBy(x => rand.Next()).Take(randRequests).ToList<int>();
-                    engineName = string.Format(" in {0}", 
-                        engineList[randResults[0]].Value);
-                    engineDetails = string.Format("{0} uses {1} and can be found at {2}.", 
-                        engineList[randResults[0]].Value,
-                        engineList[randResults[0]].Attribute("language").Value, 
-                        engineList[randResults[0]].Attribute("url").Value);
-                    engineURL = engineList[randResults[0]].Attribute("url").Value;
-                }
-
                 // Write perks
                 randRequests = 3;
                 if (perkList.Count >= randRequests)
                 {
                     randResults = Enumerable.Range(0, perkList.Count).OrderBy(x => rand.Next()).Take(randRequests).ToList<int>();
-                    perks = string.Format(" that utilizes {0}, {1}, and {2},", 
+                    perks = string.Format(" that utilizes {0}, {1}, and {2}.",
                         perkList[randResults[0]].Value,
-                        perkList[randResults[1]].Value, 
+                        perkList[randResults[1]].Value,
                         perkList[randResults[2]].Value);
                 }
 
-                // Write theme
-                if (themeList.Any())
+                // Write setting
+                randRequests = 1;
+                if (settingList.Any())
                 {
-                    theme = string.Format(" that takes place {0}.", 
-                        themeList[rand.Next(0, themeList.Count)].Value);
+                    randResults = Enumerable.Range(0, settingList.Count).OrderBy(x => rand.Next()).Take(randRequests).ToList<int>();
+                    setting = string.Format("This game has {0} {1} setting",
+                        settingList[randResults[0]].Attribute("an").Value == "true" ? "an" : "a",
+                        settingList[randResults[0]].Value);
                 }
 
                 // Write style
-                // TODO: write style.
+                randRequests = 1;
+                if (styleList.Any())
+                {
+                    randResults = Enumerable.Range(0, styleList.Count).OrderBy(x => rand.Next()).Take(randRequests).ToList<int>();
+                    style = string.Format(" with {0} {1} art style.",
+                        styleList[randResults[0]].Attribute("an").Value == "true" ? "an" : "a",
+                        styleList[randResults[0]].Value);
+                }
 
-                output = genres + engineName + perks + theme + style;
+                // Write engine and get its URL
+                randRequests = 1;
+                if (engineList.Count >= randRequests)
+                {
+                    randResults = Enumerable.Range(0, engineList.Count).OrderBy(x => rand.Next()).Take(randRequests).ToList<int>();
+                    engine = string.Format("Need an engine? Try using {0} to build this game, which can be found at {1}. {0} uses {2} as its language.",
+                        engineList[randResults[0]].Value,
+                        engineList[randResults[0]].Attribute("url").Value,
+                        engineList[randResults[0]].Attribute("language").Value);
+                    engineURL = engineList[randResults[0]].Attribute("url").Value;
+                }
+
+                // add the strings to the output to make sentences.
+                output.Add(genres + perks); 
+                output.Add(setting + style);
+                output.Add(engine);
 
                 websiteButton.Enabled = true;
             }
             catch(Exception ex)
             {
-                output = ex.Message;
+                output.Clear();
+                output.Add(ex.Message);
             }
 
+            // output the sentences to the text box.
             textOutput.Clear();
-            textOutput.AppendText(output);
-            textOutput.AppendText(Environment.NewLine);
-            textOutput.AppendText(Environment.NewLine);
-            textOutput.AppendText(engineDetails);
+            foreach (string sentence in output)
+            {
+                textOutput.AppendText(sentence);
+                if (sentence != output.Last())
+                {
+                    textOutput.AppendText(Environment.NewLine);
+                    textOutput.AppendText(Environment.NewLine);
+                }
+            }
         }
 
         /// <summary>
