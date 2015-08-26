@@ -50,11 +50,11 @@ engine attribute(language)
     <engine url="http://haxeflixel.com/" language="Haxe">HaxeFlixel</engine>
     <engine url="http://jmonkeyengine.org/" language="Java">JMonkey3</engine>
     <engine url="http://phaser.io/" language="HTML5, JavaScript">Phaser</engine>
-    <engine url="http://libgdx.badlogicgames.com/" language="Java">libgdx</engine>
-    <engine url="http://www.stencyl.com/" language="non existant">stencyl</engine>
-    <engine url="http://unity3d.com" language="C#, Boo, UnityScript">Unity</engine>
-    <engine url="https://www.yoyogames.com/studio" language="GML">Game Maker</engine>
-    <engine url="https://www.unrealengine.com/products/udk" language="Unrealscript">UDK</engine>
+    <engine url="http://libgdx.badlogicgames.com/" language="Java">libGDX</engine>
+    <engine url="http://www.stencyl.com/" language="nothing">stencyl</engine>
+    <engine url="http://unity3d.com" language="C#, Boo, JavaScript">Unity</engine>
+    <engine url="https://www.yoyogames.com/studio" language="Game Maker Language (GML)">Game Maker</engine>
+    <engine url="https://www.unrealengine.com/what-is-unreal-engine-4" language="C++">Unreal Engine 4</engine>
   </engines>
   <perks>
     <perk>skill trees</perk>
@@ -71,7 +71,7 @@ engine attribute(language)
     <perk>character customization</perk>
     <perk>Metroidvania dynamics</perk>
     <perk>destructible environments</perk>
-    <perk>cutscenes / self playing demo</perk>
+    <perk>cutscenes / cinematics</perk>
   </perks>
   <settings>
     <setting an="true">apocalyptic</setting>
