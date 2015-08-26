@@ -118,27 +118,27 @@
             {  
                 "url":"http://libgdx.badlogicgames.com/",
                 "language":"Java",
-                "name":"libgdx"
+                "name":"libGDX"
             },
             {  
                 "url":"http://www.stencyl.com/",
-                "language":"non existant",
+                "language":"nothing",
                 "name":"stencyl"
             },
             {  
                 "url":"http://unity3d.com",
-                "language":"C#, Boo, UnityScript",
+                "language":"C#, Boo, JavaScript",
                 "name":"Unity"
             },
             {  
                 "url":"https://www.yoyogames.com/studio",
-                "language":"GML",
+                "language":"Game Maker Language (GML)",
                 "name":"Game Maker"
             },
             {  
-                "url":"https://www.unrealengine.com/products/udk",
-                "language":"Unrealscript",
-                "name":"UDK"
+                "url":"https://www.unrealengine.com/what-is-unreal-engine-4",
+                "language":"C++",
+                "name":"Unreal Engine 4"
             }
         ],
         "perks":[  
@@ -185,7 +185,7 @@
                 "perk":"destructible environments"
             },
             {  
-                "perk":"cutscenes / self playing demo"
+                "perk":"cutscenes / cinematics"
             }
         ],
         "settings":[  
