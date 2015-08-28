@@ -96,11 +96,6 @@
                 "name":"pixi.js"
             },
             {  
-                "url":"http://www.blender.org/",
-                "language":"Python",
-                "name":"Blender"
-            },
-            {  
                 "url":"http://haxeflixel.com/",
                 "language":"Haxe",
                 "name":"HaxeFlixel"
@@ -112,7 +107,7 @@
             },
             {  
                 "url":"http://phaser.io/",
-                "language":"HTML5, JavaScript",
+                "language":"HTML5 and JavaScript",
                 "name":"Phaser"
             },
             {  
@@ -121,14 +116,19 @@
                 "name":"libGDX"
             },
             {  
-                "url":"http://www.stencyl.com/",
-                "language":"nothing",
-                "name":"stencyl"
+                "url":"http://unity3d.com",
+                "language":"C#, Boo, and JavaScript",
+                "name":"Unity"
             },
             {  
-                "url":"http://unity3d.com",
-                "language":"C#, Boo, JavaScript",
-                "name":"Unity"
+                "url":"http://www.cocos2d-x.org/",
+                "language":"C++, Lua, and JavaScript",
+                "name":"Cocos2d-X"
+            },
+            {
+                "url":"http://paradox3d.net/",
+                "language":"C#",
+                "name":"Paradox"
             },
             {  
                 "url":"https://www.yoyogames.com/studio",
