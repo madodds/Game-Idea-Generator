@@ -72,6 +72,10 @@
             {  
                 "an":"false",
                 "genre":"flight"
+            },
+            {
+                "an":"false",
+                "genre":"rhythm"
             }
         ],
         "engines":[  
@@ -139,14 +143,21 @@
                 "url":"https://www.unrealengine.com/what-is-unreal-engine-4",
                 "language":"C++",
                 "name":"Unreal Engine 4"
+            },
+            {
+                "url":"https://www.cryengine.com/",
+                "language":"Lua, C++, and C#",
+                "name":"CRYENGINE"
+            },
+            {
+                "url":"https://aws.amazon.com/lumberyard/",
+                "language":"C++",
+                "name":"Amazon Lumberyard"
             }
         ],
         "perks":[  
             {  
                 "perk":"skill trees"
-            },
-            {  
-                "perk":"pathfinding"
             },
             {  
                 "perk":"synchronized music"
@@ -162,9 +173,6 @@
             },
             {  
                 "perk":"an open world"
-            },
-            {  
-                "perk":"sandbox capabilities"
             },
             {  
                 "perk":"turn-based gameplay"
@@ -186,6 +194,12 @@
             },
             {  
                 "perk":"cutscenes / cinematics"
+            },
+            {
+                "perk":"community moddability"
+            },
+            {
+                "perk":"virtual reality hardware"
             }
         ],
         "settings":[  
