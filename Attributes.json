@@ -213,7 +213,7 @@
             },
             {  
                 "an":"true",
-                "setting":"eastern"
+                "setting":"eastern Asia"
             },
             {  
                 "an":"false",
@@ -240,8 +240,8 @@
                 "setting":"medieval"
             },
             {  
-                "an":"false",
-                "setting":"western"
+                "an":"true",
+                "setting":"old western"
             }
         ],
         "styles":[  
